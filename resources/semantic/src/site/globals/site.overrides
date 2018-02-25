@@ -1159,6 +1159,7 @@ h4, h5, h6 {
 }
 
 .bottom-section-buttons {
+  text-align: center;
   & > .ui.button {
     margin: 5px 5px 5px;
   }
@@ -2184,9 +2185,10 @@ input[type="range"] {
     }
     & > * {
       padding: 25px;
+      text-align: center;
     }
     .button {
-      display: block;
+      display: inline-block;
       min-width: 85px;
       margin-left: auto;
       margin-right: auto;
