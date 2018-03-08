@@ -14,6 +14,7 @@
     [name-bazaar.server.generator]
     [name-bazaar.server.syncer]
     [name-bazaar.shared.smart-contracts]
+    [cljs-ipfs-api.core :refer [init-ipfs]]
     [taoensso.timbre :refer-macros [info warn error]]))
 
 (nodejs/enable-util-print!)
@@ -38,6 +39,8 @@
     (mount/except [#'name-bazaar.server.deployer/deployer
                    #'name-bazaar.server.generator/generator])
     (mount/start))
+
+  (init-ipfs "/ip4/127.0.0.1/tcp/5001")
   (warn "System started" {:config (medley/dissoc-in @config [:emailer :private-key])}))
 
 (set! *main-cli-fn* -main)

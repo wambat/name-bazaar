@@ -25,6 +25,8 @@
                  [re-frisk "0.5.3"]
                  [soda-ash "0.76.0"]
 
+                 [cljs-ipfs-api "0.0.6-SNAPSHOT"]
+
                  [district0x/bignumber "1.0.1"]
                  [district0x/district-encryption "1.0.0"]
                  [district0x/district-sendgrid "1.0.0"]
